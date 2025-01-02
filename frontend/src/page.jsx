@@ -23,7 +23,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EmailIcon from "@mui/icons-material/Email";
 import backgroundImage from "./assets/cover.jpg";
-
+import { Link } from 'react-router-dom';
 const tours = [
   {
     id: 1,
@@ -111,7 +111,9 @@ function HomePage() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             TourPlanner
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" component={Link} to="/login">
+  Login
+</Button>
         </Toolbar>
       </AppBar>
 

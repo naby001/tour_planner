@@ -32,7 +32,7 @@ export default function LoginPage() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: 'background.default',
+        bgcolor: 'grey.100',
       }}
     >
       <Container component="main" maxWidth="xs" sx={{ mt: 8, mb: 2 }}>
