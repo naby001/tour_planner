@@ -3,7 +3,14 @@ import {
     Box,
     TextField,
     Typography, // Add this line
-    Button // Add this line
+    Button, // Add this line
+    AppBar,
+    Toolbar,
+    Container,
+    Grid,
+    Card,
+    CardMedia,
+    CardContent
   } from "@mui/material";
   import { Search as SearchIcon, Explore as ExploreIcon, EmojiPeople as EmojiPeopleIcon } from "@mui/icons-material";
   
