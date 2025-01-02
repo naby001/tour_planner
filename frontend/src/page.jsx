@@ -28,19 +28,22 @@ const tours = [
   {
     id: 1,
     title: "Paris Adventure",
-    image: "/placeholder.svg?height=200&width=300",
+    image:
+      "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
     description: "Explore the City of Light",
   },
   {
     id: 2,
     title: "Tokyo Discovery",
-    image: "/placeholder.svg?height=200&width=300",
+    image:
+      "https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
     description: "Experience the blend of tradition and modernity",
   },
   {
     id: 3,
     title: "New York City Escape",
-    image: "/placeholder.svg?height=200&width=300",
+    image:
+      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
     description: "The city that never sleeps awaits",
   },
 ];
@@ -49,13 +52,13 @@ const testimonials = [
   {
     id: 1,
     name: "John Doe",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "url(${backgroundImage})",
     text: "TourPlanner made our family vacation unforgettable!",
   },
   {
     id: 2,
     name: "Jane Smith",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "url(${backgroundImage})",
     text: "The best way to discover hidden gems in any city.",
   },
   {
@@ -67,14 +70,14 @@ const testimonials = [
 ];
 
 const destinations = [
-  { id: 1, name: "Bali", image: "/placeholder.svg?height=300&width=400" },
-  { id: 2, name: "Santorini", image: "/placeholder.svg?height=300&width=400" },
+  { id: 1, name: "Bali", image: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600?height=300&width=400" },
+  { id: 2, name: "Santorini", image: "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300" },
   {
     id: 3,
     name: "Machu Picchu",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
   },
-  { id: 4, name: "Kyoto", image: "/placeholder.svg?height=300&width=400" },
+  { id: 4, name: "Kyoto", image: "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400" },
 ];
 
 function HomePage() {
