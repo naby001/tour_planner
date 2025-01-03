@@ -23,7 +23,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EmailIcon from "@mui/icons-material/Email";
 import backgroundImage from "./assets/cover.jpg";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const tours = [
   {
     id: 1,
@@ -70,14 +70,30 @@ const testimonials = [
 ];
 
 const destinations = [
-  { id: 1, name: "Bali", image: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600?height=300&width=400" },
-  { id: 2, name: "Santorini", image: "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300" },
+  {
+    id: 1,
+    name: "Bali",
+    image:
+      "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600?height=300&width=400",
+  },
+  {
+    id: 2,
+    name: "Santorini",
+    image:
+      "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
+  },
   {
     id: 3,
     name: "Machu Picchu",
-    image: "https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
+    image:
+      "https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
   },
-  { id: 4, name: "Kyoto", image: "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400" },
+  {
+    id: 4,
+    name: "Kyoto",
+    image:
+      "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
+  },
 ];
 
 function HomePage() {
@@ -111,9 +127,12 @@ function HomePage() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             TourPlanner
           </Typography>
-          <Button color="inherit" component={Link} to="/login">
-  Login
-</Button>
+          
+          <Button color="inherit" component={Link} to="">Explore</Button>
+          <Button color="inherit" component={Link} to="">Plan Your Trip</Button>
+          <Button color="inherit" component={Link} to="">Magazine</Button>
+          <Button color="inherit" component={Link} to="">About</Button>
+          <Button color="inherit" component={Link} to="/login">Login</Button>
         </Toolbar>
       </AppBar>
 
