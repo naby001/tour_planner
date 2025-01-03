@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import HomePage from './page';
 import LoginPage from './login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Explore } from './explore';
 
 const theme = createTheme({
   palette: {
@@ -60,6 +61,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/explore" element={ <Explore/>} />
         </Routes>
       </Router>
     </ThemeProvider>
