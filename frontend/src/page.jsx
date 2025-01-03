@@ -128,10 +128,10 @@ function HomePage() {
             TourPlanner
           </Typography>
           
-          <Button color="inherit" component={Link} to="">Explore</Button>
+          <Button color="inherit" component={Link} to="/explore">Explore</Button>
           <Button color="inherit" component={Link} to="">Plan Your Trip</Button>
           <Button color="inherit" component={Link} to="">Magazine</Button>
-          <Button color="inherit" component={Link} to="">About</Button>
+          <Button color="inherit" component={Link} to="/about">About</Button>
           <Button color="inherit" component={Link} to="/login">Login</Button>
         </Toolbar>
       </AppBar>

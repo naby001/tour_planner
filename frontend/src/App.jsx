@@ -5,6 +5,8 @@ import HomePage from './page';
 import LoginPage from './login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Explore } from './explore';
+// import { PlanYourTrip } from './plan';
+import { About } from './about';
 
 const theme = createTheme({
   palette: {
@@ -62,6 +64,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/explore" element={ <Explore/>} />
+          {/* <Route path="/plan" element={<PlanYourTrip />} /> */}
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </ThemeProvider>
