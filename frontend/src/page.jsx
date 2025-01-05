@@ -118,78 +118,237 @@ function HomePage() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        color: "white",
+        //color: "white",
+        backgroundColor: "rgba(255, 223, 0, 0.4)",
       }}
     >
-      <AppBar position="static" sx={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}>
-        <Toolbar>
-          <ExploreIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            TourPlanner
-          </Typography>
-          
-          <Button color="inherit" component={Link} to="/explore">Explore</Button>
-          <Button color="inherit" component={Link} to="">Plan Your Trip</Button>
-          <Button color="inherit" component={Link} to="">Magazine</Button>
-          <Button color="inherit" component={Link} to="/about">About</Button>
-          <Button color="inherit" component={Link} to="/login">Login</Button>
-        </Toolbar>
-      </AppBar>
+      <AppBar
+  position="static"
+  sx={{
+    background: "#282a3a", // Gradient background
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
+   // borderRadius:5,
+   // width:900
+  }}
+>
+  <Toolbar>
+    <ExploreIcon
+      sx={{
+        mr: 2,
+        color: "white",
+        fontSize: 28,
+        "&:hover": {
+          color: "#ffd700", // Golden glow on hover
+          textShadow: "0 0 8px #ffd700",
+        },
+      }}
+    />
+    <Typography
+      variant="h6"
+      component="div"
+      sx={{
+        flexGrow: 1,
+        fontFamily: "k2d",
+        fontWeight: "bold",
+        color: "white",
+        letterSpacing: 1.2,
+      }}
+    >
+      TourPlanner
+    </Typography>
+    <Button
+      color="inherit"
+      component={Link}
+      to="/explore"
+      sx={{
+        color: "white",
+        fontSize: 16,
+        "&:hover": {
+          color: "#ffd700",
+          transform: "scale(1.1)", // Slight enlargement on hover
+        },
+        transition: "transform 0.2s, color 0.2s",
+      }}
+    >
+      Explore
+    </Button>
+    <Button
+      color="inherit"
+      component={Link}
+      to=""
+      sx={{
+        color: "white",
+        fontSize: 16,
+        "&:hover": {
+          color: "#ffd700",
+          transform: "scale(1.1)",
+        },
+        transition: "transform 0.2s, color 0.2s",
+      }}
+    >
+      Plan Your Trip
+    </Button>
+    <Button
+      color="inherit"
+      component={Link}
+      to=""
+      sx={{
+        color: "white",
+        fontSize: 16,
+        "&:hover": {
+          color: "#ffd700",
+          transform: "scale(1.1)",
+        },
+        transition: "transform 0.2s, color 0.2s",
+      }}
+    >
+      Magazine
+    </Button>
+    <Button
+      color="inherit"
+      component={Link}
+      to="/about"
+      sx={{
+        color: "white",
+        fontSize: 16,
+        "&:hover": {
+          color: "#ffd700",
+          transform: "scale(1.1)",
+        },
+        transition: "transform 0.2s, color 0.2s",
+      }}
+    >
+      About
+    </Button>
+    <Button
+      color="inherit"
+      component={Link}
+      to="/login"
+      sx={{
+        color: "white",
+        fontSize: 16,
+        "&:hover": {
+          color: "#ffd700",
+          transform: "scale(1.1)",
+        },
+        transition: "transform 0.2s, color 0.2s",
+      }}
+    >
+      Login
+    </Button>
+  </Toolbar>
+</AppBar>
 
       <Box
         sx={{
-          flexGrow: 1,
+          height:'100vh',
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          bgcolor: "rgba(0, 0, 0, 0.5)",
+         // justifyContent: "center",
+          backgroundColor: "rgba(255, 223, 0, 0.4)",
           py: 6,
         }}
       >
-        <Container maxWidth="sm">
+       
           <Typography
             component="h1"
-            variant="h2"
+            //variant="h2"
             align="center"
             color="white"
             gutterBottom
+            sx={{
+              fontWeight: "bold",
+              color: "white",
+              mb: 1,
+              fontFamily: "K2D",
+             fontSize: 100,
+              textShadow: `
+                1px 1px 0px #ff8c00, 
+                2px 2px 0px #ff4500, 
+                3px 3px 0px #ff1493, 
+                4px 4px 0px #9400d3, 
+                5px 5px 0px #1e90ff, 
+                6px 6px 0px #00fa9a
+              `,
+              marginTop:10
+            }}
           >
             Plan Your Dream Tour
           </Typography>
-          <Typography variant="h5" align="center" color="white" paragraph>
-            Discover amazing destinations and create unforgettable memories with
-            our tour planning service.
+          <Typography variant="h5" align="center" color="white"   sx={{
+            color: "white",
+            mb: 4,
+            fontFamily: "K2D",
+            fontSize: 40,
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+          }}>
+            Create a group with your friends and family and plan your upcoming getaway
           </Typography>
-          <Box sx={{ mt: 4 }}>
-            <Grid container spacing={2} justifyContent="center">
-              <Grid item xs={12} sm={8}>
-                <TextField
-                  fullWidth
-                  variant="outlined"
-                  placeholder="Where do you want to go?"
-                  InputProps={{
-                    startAdornment: (
-                      <SearchIcon sx={{ color: "action.active", mr: 1 }} />
-                    ),
-                    style: { backgroundColor: "white" },
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={4}>
+          <Box sx={{ mt: 4, alignItems: "center", display: "flex", flexDirection:"column" }}>
+           
+          <TextField
+  fullWidth
+  variant="outlined"
+  placeholder="Tell us your plan and we will create an itinerary for you..."
+  InputProps={{
+    style: {
+      backgroundColor: "#282a3a",
+      borderRadius: 30,
+      paddingLeft: 8, // Adjusted padding for better spacing
+    },
+  }}
+  sx={{
+    marginBottom: 2,
+    width: "60%",
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "rgba(58, 134, 255, 0.8)", // Neon blue border
+        borderWidth: 2,
+      },
+      "&:hover fieldset": {
+        borderColor: "rgba(58, 134, 255, 1)", // Brighter on hover
+        boxShadow: "0 0 8px rgba(58, 134, 255, 0.8)", // Neon glow
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "rgba(58, 134, 255, 1)", // Solid neon blue on focus
+        boxShadow: "0 0 12px rgba(58, 134, 255, 1)", // Stronger glow on focus
+      },
+    },
+    "& .MuiInputBase-input::placeholder": {
+      color: "rgba(255, 255, 255, 0.4)", // Placeholder text color
+    },
+    "& .MuiInputBase-input": {
+      color: "white", // Input text color
+    },
+  }}
+/>
+      
+            
                 <Button
                   fullWidth
                   variant="contained"
                   size="large"
                   startIcon={<EmojiPeopleIcon />}
-                  sx={{ backgroundColor: "blue", color: "white" }}
+                  sx={{
+                    background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)", // Gradient colors
+                    color: "white",
+                    width: "15%",
+                    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)", // Adds depth
+                    borderRadius: "8px", // Rounded corners for a modern look
+                    transition: "transform 0.2s, box-shadow 0.2s", // Smooth animation on hover
+                    "&:hover": {
+                      transform: "scale(1.05)", // Slightly enlarge on hover
+                      boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+                    },
+                    fontFamily: "K2D",
+                  }}
                 >
-                  Plan Now
+                  Create Tour
                 </Button>
-              </Grid>
-            </Grid>
+           
+    
           </Box>
-        </Container>
-      </Box>
+  </Box>
 
       <Container sx={{ py: 8 }} maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
