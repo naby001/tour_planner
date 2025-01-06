@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Explore } from './explore';
 // import { PlanYourTrip } from './plan';
 import { About } from './about';
+import GroupTourMagazine from './magazine';
 
 const theme = createTheme({
   palette: {
@@ -66,6 +67,7 @@ function App() {
           <Route path="/explore" element={ <Explore/>} />
           {/* <Route path="/plan" element={<PlanYourTrip />} /> */}
           <Route path="/about" element={<About />} />
+          <Route path="/magazine" element={<GroupTourMagazine/>} /> 
         </Routes>
       </Router>
     </ThemeProvider>

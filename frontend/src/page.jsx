@@ -27,43 +27,43 @@ import { Link } from "react-router-dom";
 const tours = [
   {
     id: 1,
-    title: "Paris Adventure",
+    title: "Golden Triangle Tour",
     image:
-      "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "Explore the City of Light",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
+    description: "Discover Delhi, Agra, and Jaipur",
   },
   {
     id: 2,
-    title: "Tokyo Discovery",
+    title: "Kerala Backwaters",
     image:
-      "https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "Experience the blend of tradition and modernity",
+      "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
+    description: "Experience the serene backwaters of Kerala",
   },
   {
     id: 3,
-    title: "New York City Escape",
+    title: "Goa Beach Holiday",
     image:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "The city that never sleeps awaits",
+      "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
+    description: "Relax on the sunny beaches of Goa",
   },
 ];
 
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Rahul Sharma",
     avatar: "url(${backgroundImage})",
-    text: "TourPlanner made our family vacation unforgettable!",
+    text: "TourPlanner made our trip to India unforgettable!",
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Priya Singh",
     avatar: "url(${backgroundImage})",
-    text: "The best way to discover hidden gems in any city.",
+    text: "The best way to explore India's hidden gems.",
   },
   {
     id: 3,
-    name: "Mike Johnson",
+    name: "Amit Patel",
     avatar: "/placeholder.svg?height=50&width=50",
     text: "I've never had such a seamless travel experience before.",
   },
@@ -72,27 +72,27 @@ const testimonials = [
 const destinations = [
   {
     id: 1,
-    name: "Bali",
+    name: "Jaipur",
     image:
-      "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600?height=300&width=400",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=600?height=300&width=400",
   },
   {
     id: 2,
-    name: "Santorini",
+    name: "Kerala",
     image:
-      "https://images.pexels.com/photos/29972111/pexels-photo-29972111/free-photo-of-eiffel-tower-at-sunset-with-seine-river.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
+      "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
   },
   {
     id: 3,
-    name: "Machu Picchu",
+    name: "Goa",
     image:
-      "https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
+      "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
   },
   {
     id: 4,
-    name: "Kyoto",
+    name: "Agra",
     image:
-      "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
+      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=400?height=300&width=400",
   },
 ];
 
@@ -191,7 +191,7 @@ function HomePage() {
     <Button
       color="inherit"
       component={Link}
-      to=""
+      to="/magazine"
       sx={{
         color: "white",
         fontSize: 16,
