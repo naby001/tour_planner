@@ -1,13 +1,15 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import HomePage from './page';
-import LoginPage from './login';
+import HomePage from './pages/Homepage'; 
+import LoginPage from './pages/Login'; 
+import SignUpPage from './pages/SignUp'; 
+import {Explore} from './pages/explore'; 
+import {About} from './pages/about'; 
+import GroupTourMagazine from './pages/magazine'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Explore } from './explore';
-// import { PlanYourTrip } from './plan';
-import { About } from './about';
-import GroupTourMagazine from './magazine';
+
+
 
 const theme = createTheme({
   palette: {
@@ -63,6 +65,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/explore" element={ <Explore/>} />
           {/* <Route path="/plan" element={<PlanYourTrip />} /> */}
