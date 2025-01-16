@@ -33,6 +33,21 @@ const tours = [
   { id: 4, title: 'Goa Beaches', description: 'Relax on the beautiful beaches of Goa', image: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg' },
 ];
 
+const Header = () => (
+  <AppBar position="static" color="transparent" elevation={0}>
+    <Toolbar>
+      <Typography variant="h4" component="div" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+        India Tour Planner
+      </Typography>
+      <Box>
+        <Button color="inherit">Home</Button>
+        <Button color="inherit">Tours</Button>
+        <Button color="inherit">About</Button>
+        <Button color="inherit">Contact</Button>
+      </Box>
+    </Toolbar>
+  </AppBar>
+);
 
 const FeaturedTour = () => (
   <Paper 
@@ -117,7 +132,7 @@ export default function GroupTourMagazine() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <React.Fragment>
-        
+        <Header />
         <FeaturedTour />
         <TourGrid />
       </React.Fragment>
