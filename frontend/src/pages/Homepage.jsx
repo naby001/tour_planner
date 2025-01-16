@@ -117,12 +117,12 @@ function HomePage() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100vh",
+       
+        maxHeight:"100vh",
        
         backgroundSize: "cover",
         backgroundPosition: "center",
       
-        backgroundColor: "rgba(255, 223, 0, 0.4)",
       }}
     >
       <video
@@ -135,7 +135,7 @@ function HomePage() {
                 top: "0",
                 left: "0",
                 width: "100%",
-                height: "100%",
+                height: "80%",
                 objectFit: "cover",
                 zIndex: -1, // Ensures video stays behind content
               }}
