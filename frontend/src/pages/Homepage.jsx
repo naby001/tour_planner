@@ -22,7 +22,9 @@ import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EmailIcon from "@mui/icons-material/Email";
-import backgroundImage from "../assets/back.webp";
+import backgroundImage from "../assets/back.jpg";
+import backgroundvid from "../assets/vid.mp4";
+
 import { Link } from "react-router-dom";
 
 
@@ -116,13 +118,32 @@ function HomePage() {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        backgroundImage: `url(${backgroundImage})`,
+       
         backgroundSize: "cover",
         backgroundPosition: "center",
-        //color: "white",
+      
         backgroundColor: "rgba(255, 223, 0, 0.4)",
       }}
     >
+      <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1, // Ensures video stays behind content
+              }}
+            >
+              <source src={backgroundvid} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+      
       <AppBar
   position="static"
   sx={{
