@@ -22,31 +22,32 @@ import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EmailIcon from "@mui/icons-material/Email";
-import backgroundImage from "../assets/cover.jpg";
+import backgroundImage from "../assets/back.webp";
 import { Link } from "react-router-dom";
-const tours = [
-  {
-    id: 1,
-    title: "Golden Triangle Tour",
-    image:
-      "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "Discover Delhi, Agra, and Jaipur",
-  },
-  {
-    id: 2,
-    title: "Kerala Backwaters",
-    image:
-      "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "Experience the serene backwaters of Kerala",
-  },
-  {
-    id: 3,
-    title: "Goa Beach Holiday",
-    image:
-      "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&w=600?height=200&width=300",
-    description: "Relax on the sunny beaches of Goa",
-  },
-];
+
+
+  const tours = [
+    {
+      id: 1,
+      title: "Innovators' Challenge",
+      description: "Participate in our robotics competition to showcase your innovation skills.",
+      image: "https://images.pexels.com/photos/5428833/pexels-photo-5428833.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+      id: 2,
+      title: "CAD Masterclass",
+      description: "Learn advanced CAD modeling techniques with industry experts.",
+      image: "https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+    {
+      id: 3,
+      title: "Sustainable Design Summit",
+      description: "Discuss the future of sustainable mechanical engineering designs.",
+      image: "https://images.pexels.com/photos/3815587/pexels-photo-3815587.jpeg",
+    },
+  ];
+  
+
 
 const testimonials = [
   {
@@ -154,7 +155,7 @@ function HomePage() {
         letterSpacing: 1.2,
       }}
     >
-      TourPlanner
+    TraJectory
     </Typography>
     <Button
       color="inherit"
@@ -245,7 +246,7 @@ function HomePage() {
           display: "flex",
           flexDirection: "column",
          // justifyContent: "center",
-          backgroundColor: "rgba(255, 223, 0, 0.4)",
+          backgroundColor: "rgba(23, 23, 17, 0.4)",
           py: 6,
         }}
       >
@@ -273,86 +274,20 @@ function HomePage() {
               marginTop:10
             }}
           >
-            Plan Your Dream Tour
+           Welcome to Mechanical Tech Fest
           </Typography>
-          <Typography variant="h5" align="center" color="white"   sx={{
-            color: "white",
-            mb: 4,
-            fontFamily: "K2D",
-            fontSize: 40,
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-          }}>
-            Create a group with your friends and family and plan your upcoming getaway
-          </Typography>
-          <Box sx={{ mt: 4, alignItems: "center", display: "flex", flexDirection:"column" }}>
-           
-          <TextField
-  fullWidth
-  variant="outlined"
-  placeholder="Tell us your plan and we will create an itinerary for you..."
-  InputProps={{
-    style: {
-      backgroundColor: "#282a3a",
-      borderRadius: 30,
-      paddingLeft: 8, // Adjusted padding for better spacing
-    },
-  }}
-  sx={{
-    marginBottom: 2,
-    width: "60%",
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "rgba(58, 134, 255, 0.8)", // Neon blue border
-        borderWidth: 2,
-      },
-      "&:hover fieldset": {
-        borderColor: "rgba(58, 134, 255, 1)", // Brighter on hover
-        boxShadow: "0 0 8px rgba(58, 134, 255, 0.8)", // Neon glow
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "rgba(58, 134, 255, 1)", // Solid neon blue on focus
-        boxShadow: "0 0 12px rgba(58, 134, 255, 1)", // Stronger glow on focus
-      },
-    },
-    "& .MuiInputBase-input::placeholder": {
-      color: "rgba(255, 255, 255, 0.4)", // Placeholder text color
-    },
-    "& .MuiInputBase-input": {
-      color: "white", // Input text color
-    },
-  }}
-/>
+          
       
             
-                <Button
-                  fullWidth
-                  variant="contained"
-                  size="large"
-                  startIcon={<EmojiPeopleIcon />}
-                  sx={{
-                    background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)", // Gradient colors
-                    color: "white",
-                    width: "15%",
-                    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)", // Adds depth
-                    borderRadius: "8px", // Rounded corners for a modern look
-                    transition: "transform 0.2s, box-shadow 0.2s", // Smooth animation on hover
-                    "&:hover": {
-                      transform: "scale(1.05)", // Slightly enlarge on hover
-                      boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)", // Enhanced shadow
-                    },
-                    fontFamily: "K2D",
-                  }}
-                >
-                  Create Tour
-                </Button>
+                
            
     
-          </Box>
+         
   </Box>
 
       <Container sx={{ py: 8 }} maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
-          Featured Tours
+          Featured events
         </Typography>
         <Grid container spacing={4}>
           {tours.map((tour) => (
