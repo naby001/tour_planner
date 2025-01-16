@@ -24,30 +24,49 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import EmailIcon from "@mui/icons-material/Email";
 import backgroundImage from "../assets/back.jpg";
 import backgroundvid from "../assets/vid.mp4";
+import Navbar from "./Navbar";
 
 import { Link } from "react-router-dom";
 
+const tours = [
+  {
+    id: 1,
+    title: "Simulation Challenge",
+    description: "Test your problem-solving skills with complex simulations and scenarios.",
+    image: "https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 2,
+    title: "Case Study",
+    description: "Dive deep into real-world engineering cases and come up with innovative solutions.",
+    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 3,
+    title: "General",
+    description: "Quiz, Debate, Cultural events etc..",
+    image: "https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 4,
+    title: "Fun Activities",
+    description: "Engage in exciting and interactive activities to unwind and have fun.",
+    image: "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 5,
+    title: "Hardware Challenge",
+    description: "Compete in designing innovative hardware solutions to real-world problems.",
+    image: "https://images.pexels.com/photos/7869047/pexels-photo-7869047.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 6,
+    title: "AI & Machine Learning Workshop",
+    description: "Learn and implement the latest AI and machine learning techniques to solve modern problems.",
+    image: "https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&w=600", // replace with a suitable image URL
+  }
+];
 
-  const tours = [
-    {
-      id: 1,
-      title: "Innovators' Challenge",
-      description: "Participate in our robotics competition to showcase your innovation skills.",
-      image: "https://images.pexels.com/photos/5428833/pexels-photo-5428833.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      id: 2,
-      title: "CAD Masterclass",
-      description: "Learn advanced CAD modeling techniques with industry experts.",
-      image: "https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      id: 3,
-      title: "Sustainable Design Summit",
-      description: "Discuss the future of sustainable mechanical engineering designs.",
-      image: "https://images.pexels.com/photos/3815587/pexels-photo-3815587.jpeg",
-    },
-  ];
   
 
 
@@ -117,9 +136,9 @@ function HomePage() {
       sx={{
         display: "flex",
         flexDirection: "column",
-       
+     
         maxHeight:"100vh",
-       
+        // backgroundImage: url(), 
         backgroundSize: "cover",
         backgroundPosition: "center",
       
@@ -153,112 +172,8 @@ function HomePage() {
    // width:900
   }}
 >
-  <Toolbar>
-    <ExploreIcon
-      sx={{
-        mr: 2,
-        color: "white",
-        fontSize: 28,
-        "&:hover": {
-          color: "#ffd700", // Golden glow on hover
-          textShadow: "0 0 8px #ffd700",
-        },
-      }}
-    />
-    <Typography
-      variant="h6"
-      component="div"
-      sx={{
-        flexGrow: 1,
-        fontFamily: "k2d",
-        fontWeight: "bold",
-        color: "white",
-        letterSpacing: 1.2,
-      }}
-    >
-    TraJectory
-    </Typography>
-    <Button
-      color="inherit"
-      component={Link}
-      to="/explore"
-      sx={{
-        color: "white",
-        fontSize: 16,
-        "&:hover": {
-          color: "#ffd700",
-          transform: "scale(1.1)", // Slight enlargement on hover
-        },
-        transition: "transform 0.2s, color 0.2s",
-      }}
-    >
-      Explore
-    </Button>
-    <Button
-      color="inherit"
-      component={Link}
-      to=""
-      sx={{
-        color: "white",
-        fontSize: 16,
-        "&:hover": {
-          color: "#ffd700",
-          transform: "scale(1.1)",
-        },
-        transition: "transform 0.2s, color 0.2s",
-      }}
-    >
-      Plan Your Trip
-    </Button>
-    <Button
-      color="inherit"
-      component={Link}
-      to="/magazine"
-      sx={{
-        color: "white",
-        fontSize: 16,
-        "&:hover": {
-          color: "#ffd700",
-          transform: "scale(1.1)",
-        },
-        transition: "transform 0.2s, color 0.2s",
-      }}
-    >
-      Magazine
-    </Button>
-    <Button
-      color="inherit"
-      component={Link}
-      to="/about"
-      sx={{
-        color: "white",
-        fontSize: 16,
-        "&:hover": {
-          color: "#ffd700",
-          transform: "scale(1.1)",
-        },
-        transition: "transform 0.2s, color 0.2s",
-      }}
-    >
-      About
-    </Button>
-    <Button
-      color="inherit"
-      component={Link}
-      to="/login"
-      sx={{
-        color: "white",
-        fontSize: 16,
-        "&:hover": {
-          color: "#ffd700",
-          transform: "scale(1.1)",
-        },
-        transition: "transform 0.2s, color 0.2s",
-      }}
-    >
-      Login
-    </Button>
-  </Toolbar>
+  {/* navbar */}
+  <Navbar ></Navbar>
 </AppBar>
 
       <Box
@@ -318,7 +233,7 @@ function HomePage() {
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  backgroundColor: "rgba(139, 141, 144, 0.8)",
                 }}
               >
                 <CardMedia
