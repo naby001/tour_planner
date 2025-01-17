@@ -229,12 +229,15 @@ function HomePage() {
                 5px 5px 0px #1e90ff, 
                 6px 6px 0px #00fa9a
               `,
-            marginTop: 10,
-          }}
-        >
-          Welcome to Mechanical Tech Fest yahh
-        </Typography>
-      </Box>
+
+              marginTop:10
+            }}
+          >
+           Welcome to Mechanical Tech Fest yahh
+          </Typography>
+        
+  </Box>
+
 
       <Container sx={{ py: 8 }} maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
