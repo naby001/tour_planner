@@ -32,43 +32,51 @@ const tours = [
   {
     id: 1,
     title: "Simulation Challenge",
-    description: "Test your problem-solving skills with complex simulations and scenarios.",
-    image: "https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Test your problem-solving skills with complex simulations and scenarios.",
+    image:
+      "https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 2,
     title: "Case Study",
-    description: "Dive deep into real-world engineering cases and come up with innovative solutions.",
-    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Dive deep into real-world engineering cases and come up with innovative solutions.",
+    image:
+      "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 3,
     title: "General",
     description: "Quiz, Debate, Cultural events etc..",
-    image: "https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image:
+      "https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 4,
     title: "Fun Activities",
-    description: "Engage in exciting and interactive activities to unwind and have fun.",
-    image: "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Engage in exciting and interactive activities to unwind and have fun.",
+    image:
+      "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 5,
     title: "Hardware Challenge",
-    description: "Compete in designing innovative hardware solutions to real-world problems.",
-    image: "https://images.pexels.com/photos/7869047/pexels-photo-7869047.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Compete in designing innovative hardware solutions to real-world problems.",
+    image:
+      "https://images.pexels.com/photos/7869047/pexels-photo-7869047.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 6,
     title: "AI & Machine Learning Workshop",
-    description: "Learn and implement the latest AI and machine learning techniques to solve modern problems.",
-    image: "https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&w=600", // replace with a suitable image URL
-  }
+    description:
+      "Learn and implement the latest AI and machine learning techniques to solve modern problems.",
+    image:
+      "https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&w=600", // replace with a suitable image URL
+  },
 ];
-
-  
-
 
 const testimonials = [
   {
@@ -136,14 +144,28 @@ function HomePage() {
       sx={{
         display: "flex",
         flexDirection: "column",
-     
-        maxHeight:"100vh",
-        // backgroundImage: url(), 
+         width: "100%",
+        maxHeight: "100vh",
+        // backgroundImage: url(),
         backgroundSize: "cover",
         backgroundPosition: "center",
-      
       }}
     >
+       {/* nabvar start */}
+       <AppBar
+        position="fixed"
+        sx={{
+          background: "#282a3a", // Gradient background
+          boxShadow: "0px 4px 10px rgba(255, 232, 232, 0.3)", // Subtle shadow for depth
+
+          // borderRadius:5,
+          // width:900
+        }}
+      >
+        <Navbar></Navbar>
+      </AppBar>
+
+      {/* nabvar end */}
       <video
               autoPlay
               muted
@@ -154,7 +176,7 @@ function HomePage() {
                 top: "0",
                 left: "0",
                 width: "100%",
-                height: "225%",
+                height: "80%",
                 objectFit: "cover",
                 zIndex: -1, // Ensures video stays behind content
               }}
@@ -163,45 +185,43 @@ function HomePage() {
               Your browser does not support the video tag.
             </video>
       
-      {/* nabvar */}
       <AppBar
-  position="fixed"
+  position="static"
   sx={{
     background: "#282a3a", // Gradient background
-    boxShadow: "0px 4px 10px rgba(124, 6, 6, 0.3)", // Subtle shadow for depth
-    
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
    // borderRadius:5,
    // width:900
   }}
 >
+  {/* navbar */}
   <Navbar ></Navbar>
 </AppBar>
 
-
       <Box
         sx={{
-          height:'100vh',
+          height: "100vh",
+          maxWidth: "100%",
           display: "flex",
           flexDirection: "column",
-         // justifyContent: "center",
+          // justifyContent: "center",
           backgroundColor: "rgba(23, 23, 17, 0.4)",
           py: 6,
         }}
       >
-       
-          <Typography
-            component="h1"
-            //variant="h2"
-            align="center"
-            color="white"
-            gutterBottom
-            sx={{
-              fontWeight: "bold",
-              color: "white",
-              mb: 1,
-              fontFamily: "K2D",
-             fontSize: 100,
-              textShadow: `
+        <Typography
+          component="h1"
+          //variant="h2"
+          align="center"
+          color="white"
+          gutterBottom
+          sx={{
+            fontWeight: "bold",
+            color: "white",
+            mb: 1,
+            fontFamily: "K2D",
+            fontSize: 100,
+            textShadow: `
                 1px 1px 0px #ff8c00, 
                 2px 2px 0px #ff4500, 
                 3px 3px 0px #ff1493, 
@@ -209,37 +229,20 @@ function HomePage() {
                 5px 5px 0px #1e90ff, 
                 6px 6px 0px #00fa9a
               `,
+
               marginTop:10
             }}
           >
            Welcome to Mechanical Tech Fest yahh
           </Typography>
-          
-      
-            
-                
-           
-    
-         
+        
   </Box>
 
-      <Container sx={{ py: 8 }} maxWidth="lg">
-      <Typography
-  variant="h4"
-  align="center"
-  gutterBottom
-  sx={{
-    fontFamily: "Arial, sans-serif",
-    fontWeight: "bold",
-    color: "#ffd700", // Golden color for text
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Subtle shadow for text
-    letterSpacing: 2,
-    fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, // Responsive font size
-  }}
->
-  Featured events
-</Typography>
 
+      <Container sx={{ py: 8 }} maxWidth="lg">
+        <Typography variant="h4" align="center" gutterBottom>
+          Featured events
+        </Typography>
         <Grid container spacing={4}>
           {tours.map((tour) => (
             <Grid item key={tour.id} xs={12} sm={6} md={4}>
