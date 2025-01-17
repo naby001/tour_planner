@@ -144,7 +144,7 @@ function HomePage() {
       sx={{
         display: "flex",
         flexDirection: "column",
-         width: "130%",
+         width: "100%",
         maxHeight: "100vh",
         // backgroundImage: url(),
         backgroundSize: "cover",
@@ -156,7 +156,7 @@ function HomePage() {
         position="fixed"
         sx={{
           background: "#282a3a", // Gradient background
-          boxShadow: "0px 4px 10px rgba(124, 6, 6, 0.3)", // Subtle shadow for depth
+          boxShadow: "0px 4px 10px rgba(255, 232, 232, 0.3)", // Subtle shadow for depth
 
           // borderRadius:5,
           // width:900
