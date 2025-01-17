@@ -167,25 +167,38 @@ function HomePage() {
 
       {/* nabvar end */}
       <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "142%",
-          height: "225%",
-          objectFit: "cover",
-          zIndex: -1, // Ensures video stays behind content
-        }}
-      >
-        <source src={backgroundvid} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "225%",
+                objectFit: "cover",
+                zIndex: -1, // Ensures video stays behind content
+              }}
+            >
+              <source src={backgroundvid} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+      
+      {/* nabvar */}
+      <AppBar
+  position="fixed"
+  sx={{
+    background: "#282a3a", // Gradient background
+    boxShadow: "0px 4px 10px rgba(124, 6, 6, 0.3)", // Subtle shadow for depth
+    
+   // borderRadius:5,
+   // width:900
+  }}
+>
+  <Navbar ></Navbar>
+</AppBar>
 
-     
 
       <Box
         sx={{
@@ -225,22 +238,22 @@ function HomePage() {
         </Typography>
       </Box>
 
-      <Container sx={{ py: 8 }} >
-        <Typography
-          variant="h4"
-          align="center"
-          gutterBottom
-          sx={{
-            fontFamily: "Arial, sans-serif",
-            fontWeight: "bold",
-            color: "#ffd700", // Golden color for text
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Subtle shadow for text
-            letterSpacing: 2,
-            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, // Responsive font size
-          }}
-        >
-          Featured events
-        </Typography>
+      <Container sx={{ py: 8 }} maxWidth="lg">
+      <Typography
+  variant="h4"
+  align="center"
+  gutterBottom
+  sx={{
+    fontFamily: "Arial, sans-serif",
+    fontWeight: "bold",
+    color: "#ffd700", // Golden color for text
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Subtle shadow for text
+    letterSpacing: 2,
+    fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, // Responsive font size
+  }}
+>
+  Featured events
+</Typography>
 
         <Grid container spacing={4}>
           {tours.map((tour) => (
