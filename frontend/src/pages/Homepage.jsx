@@ -176,7 +176,7 @@ function HomePage() {
                 top: "0",
                 left: "0",
                 width: "100%",
-                height: "225%",
+                height: "80%",
                 objectFit: "cover",
                 zIndex: -1, // Ensures video stays behind content
               }}
@@ -185,20 +185,18 @@ function HomePage() {
               Your browser does not support the video tag.
             </video>
       
-      {/* nabvar */}
       <AppBar
-  position="fixed"
+  position="static"
   sx={{
     background: "#282a3a", // Gradient background
-    boxShadow: "0px 4px 10px rgba(124, 6, 6, 0.3)", // Subtle shadow for depth
-    
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)", // Subtle shadow for depth
    // borderRadius:5,
    // width:900
   }}
 >
+  {/* navbar */}
   <Navbar ></Navbar>
 </AppBar>
-
 
       <Box
         sx={{
@@ -239,22 +237,9 @@ function HomePage() {
       </Box>
 
       <Container sx={{ py: 8 }} maxWidth="lg">
-      <Typography
-  variant="h4"
-  align="center"
-  gutterBottom
-  sx={{
-    fontFamily: "Arial, sans-serif",
-    fontWeight: "bold",
-    color: "#ffd700", // Golden color for text
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Subtle shadow for text
-    letterSpacing: 2,
-    fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, // Responsive font size
-  }}
->
-  Featured events
-</Typography>
-
+        <Typography variant="h4" align="center" gutterBottom>
+          Featured events
+        </Typography>
         <Grid container spacing={4}>
           {tours.map((tour) => (
             <Grid item key={tour.id} xs={12} sm={6} md={4}>
